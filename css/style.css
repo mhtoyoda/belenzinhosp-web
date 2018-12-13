@@ -2,10 +2,65 @@ header{
     width: 100%;
     position: relative;
 }
+.btn-social-icon{
+    font-size: 0.8em;
+}
 .media-social{
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    position: relative;
+}
+.icon-social{
+    position: absolute;    
+    bottom: 1em;
+}
+.search{
+    padding-top: 15px;
+}
+.bg-info{
+    padding: 10px;
+    max-width: 100%;
+    max-height: auto;
+    background-color: #8e8e8ef5 !important;
+}
+.font-info{
+    text-decoration: underline;
+}
+.font-text{
+    text-align: center;
+    font-size:0.8em;
+}
+.text-footer{
+    text-align: left;
+    font-size: 0.7em;
+}
+::-webkit-input-placeholder {
+   font-size: 25px;
+}
+:-moz-placeholder { /* Firefox 18- */
+      font-size: 25px;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+      font-size: 25px;
+}
+/* Overriding styles */
+
+::-webkit-input-placeholder {
+   font-size: 13px!important;
+}
+:-moz-placeholder { /* Firefox 18- */
+      font-size: 13px!important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+      font-size: 13px!important;
+}
+@media (max-width: 375px) {
+    .btn-social-icon{
+        font-size: 0.6em;
+    }
+}
+@media (min-width: 1440px) {
+    .btn-social-icon{
+        font-size: 1em;
+    }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}

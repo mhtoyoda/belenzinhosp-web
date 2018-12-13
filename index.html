@@ -12,28 +12,30 @@
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/wireframe.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="container">
     <div class="row">
-      <div class="col-6">
-        <img class="img-fluid mx-auto d-block" src="img/lg_belenzinhosp2.jpg" alt="Portal Belenzinho SP"> 
+      <div class="col-5 col-sm-7 col-md-8 col-lg-9">
+        <img class="img-fluid" src="img/lg_belenzinhosp2.jpg" alt="Portal Belenzinho SP"> 
       </div> 
-      <div class="col-6 media-social">
-        <a class="btn btn-social-icon">
-          <span class="fa fa-facebook"></span>
-        </a>
-        <a class="btn btn-social-icon">
-          <span class="fa fa-youtube-play"></span>
-        </a>
-        <a class="btn btn-social-icon">
-          <span class="fa fa-twitter"></span>
-        </a>
-        <a class="btn btn-social-icon">
-          <span class="fa fa-google-plus"></span>
-        </a>
+      <div class="col-7 col-sm-5 col-md-4 col-lg-3 media-social">
+        <div class="container icon-social">
+          <a class="btn btn-social-icon">
+            <span class="fa fa-facebook" ></span>
+          </a>
+          <a class="btn btn-social-icon">
+            <span class="fa fa-youtube-play"></span>
+          </a>
+          <a class="btn btn-social-icon">
+            <span class="fa fa-twitter"></span>
+          </a>
+          <a class="btn btn-social-icon">
+            <span class="fa fa-google-plus"></span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -53,33 +55,31 @@
         </div>
       </div>
     </nav>
-    <div class="py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <form class="form-inline">
-              <div class="input-group">
-                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Buscar por empresas">
-                <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
-              </div>
-            </form>
-          </div>
-          <div class="col-sm-4">
-            <form class="form-inline">
-              <div class="input-group">
-                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Tipo de negócio">
-                <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
-              </div>
-            </form>
-          </div>
-          <div class="col-sm-4">
-            <form class="form-inline">
-              <div class="input-group">
-                <input type="text" class="form-control form-control-lg" id="inlineFormInputGroup" placeholder="Prestador de serviços">
-                <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
-              </div>
-            </form>
-          </div>
+    <div class="container search">
+      <div class="row">
+        <div class="col-sm-4">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar por empresas">
+              <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Tipo de negócio">
+              <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <form class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Prestador de serviços">
+              <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -109,26 +109,36 @@
   <div class="bg-info">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 align-self-center p-4 ">
-          <h4 class="text-center">GESTÃO DE REDES SOCIAIS</h4>
-          <p class="mb-4 text-primary text-center">Perfil Digital<br> Vídeos promocionais</p>
+        <div class="col-md-4 align-self-center">
+          <h4 class="text-center font-info">Gestão de Redes Sociais</h4>
+          <p class="font-text">Perfil Digital</p>
+          <p class="font-text">Vídeos promocionais</p>
         </div>
-        <div class="col-md-4 align-self-center p-4 ">
-          <h4 class="text-center">COMUNICAÇÃO DIGITAL</h4>
-          <p class="mb-4 text-primary text-center">Eventos, Festas<br>Personalização da Frota</p>
+        <div class="col-md-4 align-self-center">
+          <h4 class="text-center font-info">Comunicação Digital</h4>
+          <p class="font-text">Eventos, Festas</p>
+          <p class="font-text">Personalização da Frota</p>
         </div>
-        <div class="col-md-4 align-self-center p-4 ">
-          <h4 class="text-center">WEBDESIGN</h4>
-          <p class="mb-4 text-primary text-center">Sites dinâmicos<br>Banco de Dados</p>
+        <div class="col-md-4 align-self-center">
+          <h4 class="text-center font-info">Webdesign</h4>
+          <p class="font-text">Sites dinâmicos</p>
+          <p class="font-text">Banco de Dados</p>
         </div>
       </div>
     </div>
   </div>
   <div class="bg-dark">
     <div class="container">
-      <div class="row w-100">
-        <div class="col-10">
-          <p class="text-center w-100">PORTAL BELENZINHO SP<br>&nbsp;SÃO PAULO - SP (11) 96125-8866 WhatsApp&nbsp;<br>FALE CONOSCO&nbsp;<br><br>2018© MRodriguesTI <br>Todos os direitos reservados</p>
+      <div class="row">
+        <div class="col-12">
+          <p class="text-center font-info">PORTAL BELENZINHO SP<br>&nbsp;SÃO PAULO - SP (11) 96125-8866 WhatsApp&nbsp;</p>
+          <p class="font-text">Fale Conosco&nbsp;</p>
+          <p class="font-text">Mapa do Site&nbsp;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="text-footer">2018© MRodriguesTI - Todos os direitos reservados</p>
         </div>
       </div>
     </div>
