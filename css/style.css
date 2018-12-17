@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 header{
     width: 100%;
     position: relative;
@@ -24,7 +27,16 @@ header{
     max-height: auto;
     background-color: #8e8e8ef5 !important;
 }
-
+.main-content{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.main-text{
+    margin-bottom: 15px;
+}
+.img-thumbnail{
+    margin-bottom: 5px;
+}
 ::-webkit-input-placeholder {
     font-size: 1em;
 }
@@ -47,6 +59,13 @@ header{
 }
 .bg-dark{
     padding-top:5px;
+}
+.title{
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+.text{
+    font-size: 0.9em;
 }
 @media (max-width: 425px) {
     .btn-social-icon{
@@ -99,6 +118,12 @@ header{
     ::-moz-placeholder {  /* Firefox 19+ */
         font-size: 0.7em !important;
     }
+    .title{
+        font-size: 0.9em;
+    }
+    .text{
+        font-size: 0.7em;
+    }
 }
 @media (min-width: 769px) {
     a.nav-link{
@@ -119,7 +144,7 @@ header{
     }
     .font-info{
         font-size:1em;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 }
 
