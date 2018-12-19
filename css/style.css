@@ -15,9 +15,6 @@ header{
     position: absolute;    
     bottom: 1em;
 }
-.font-info{
-    text-decoration: underline;
-}
 .search{
     padding-top: 15px;
 }
@@ -66,10 +63,14 @@ header{
 }
 .text{
     font-size: 0.9em;
+    color: RGB(0,0,0);
 }
 @media (max-width: 425px) {
     .btn-social-icon{
         font-size: 0.6em;
+    }
+    .align-self-center{
+        margin-top: 10px !important;
     }
 }
 @media (max-width: 320px) {
