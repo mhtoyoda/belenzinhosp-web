@@ -1,21 +1,149 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<header class="container">
+  <div class="row">
+    <div class="col-5 col-sm-7 col-md-8 col-lg-9">
+      <img class="img-fluid" src="assets/img/logo_belenzinhosp.jpg" alt="Portal Belenzinho SP"> 
+    </div> 
+    <div class="col-7 col-sm-5 col-md-4 col-lg-3 media-social">
+      <div class="container icon-social">
+        <a class="btn btn-social-icon">
+          <span class="fa fa-facebook" ></span>
+        </a>
+        <a class="btn btn-social-icon">
+          <span class="fa fa-youtube-play"></span>
+        </a>
+        <a class="btn btn-social-icon">
+          <span class="fa fa-twitter"></span>
+        </a>
+        <a class="btn btn-social-icon">
+          <span class="fa fa-google-plus"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="navbar navbar-expand-md navbar-dark bg-info w-100">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"    data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center justify-content-between" id="navbar2SupportedContent">
+      <ul class="navbar-nav w-100 text-center">            
+        <li class="nav-item active w-100 text-uppercase"> <a class="nav-link" href="#">Início<span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item w-100 text-uppercase"> <a class="nav-link" href="#">Fale conosco</a> </li>
+        <li class="nav-item w-100 text-uppercase"> <a class="nav-link" href="#">Anuncie aqui</a> </li>
+        <li class="nav-item w-100 text-uppercase"> <a class="nav-link" href="#">privacidade</a> </li>
+        <li class="nav-item w-100 text-uppercase"><a class="nav-link" href="#">Quem somos</a></li>
+        <li class="nav-item w-100 text-uppercase"><a class="nav-link" href="#">Serviços<br></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container search">
+  <div class="row">
+    <div class="col-sm-4">
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Buscar por empresas">
+          <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Tipo de negócio">
+          <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm-4">
+      <form class="form-inline">
+        <div class="input-group">
+          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Prestador de serviços">
+          <div class="input-group-append"><button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button></div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<div class="container main-content">
+  <div class="row">
+    <div class="col-md-3 banner">          
+      <img class="img-fluid d-block img-thumbnail" src="assets/img/arte_bann.jpg">
+      <img class="img-fluid d-block img-thumbnail" src="assets/img/destaque_cadastro.jpg">
+      <img class="img-fluid d-block img-thumbnail" src="assets/img/geolocalizadas.jpg">           
+    </div>
+    <div class="col-md-6 main-text">
+      <div class="card text-center">
+        <div class="card-body">
+          <p class="card-text text-center title">BELENZINHO GANHA PORTAL DE BUSCA INÉDITO!
+          </p>
+          <p class="card-text text-left text">Com cobertura máxima de pontos de
+            comércio, serviços e empresas em geral, oferece também um sistema de
+            busca de Prestadores de Serviço do próprio bairro. O portal é dinâmico
+            e se pode consultá-lo a partir de celulares comuns, sem instalação de
+            mais um app.
+          </p>
+          <p class="card-text text-center title">eMARKETING NÃO INVASIVO</p>
+          <p class="card-text text-left text">Acreditamos numa nova forma de abordar o
+            cliente, sem invadir emails, telefones e redes sociais. O marketing
+            amigável, que exibe seu melhor produto nos locais onde clientes
+            potenciais frequentam, é a melhor forma de mostrar seu produto ou
+            serviço. Vamos juntos construir um ótimo perfil digital.</p>
+            <p class="card-text text-center title">ARTISTAS E ARTESÃOS DO BELENZINHO</p>
+            <p class="card-text text-left text">Veja quanta beleza é produzida aqui
+              mesmo, no nosso bairro. Pintores de telas, estilistas de roupas,
+              restauradores de móveis antigos.. todos produzem arte digna de
+              exibirmos em nossas casas. A beleza traz paz e harmonia.. conheça
+              nossos artistas e suas peças.<br>
+            </p>                
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 banner_right"> 
+        <img class="d-block img-fluid img-thumbnail mx-auto" src="assets/img/banner_direita.jpg"> 
+      </div>        
+    </div>
+  </div>  
+  <div class="bg-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 align-self-center">
+          <h4 class="text-center font-info text-uppercase">Gestão de Redes Sociais</h4>
+          <p class="font-text">Perfil Digital</p>
+          <p class="font-text">Vídeos promocionais</p>
+        </div>
+        <div class="col-md-3 align-self-center">
+          <h4 class="text-center font-info text-uppercase">Comunicação Digital</h4>
+          <p class="font-text">Eventos, Festas</p>
+          <p class="font-text">Personalização da Frota</p>
+        </div>
+        <div class="col-md-3 align-self-center">
+          <h4 class="text-center font-info text-uppercase">Webdesign</h4>
+          <p class="font-text">Sites dinâmicos</p>
+          <p class="font-text">Banco de Dados</p>
+        </div>
+        <div class="col-md-3 align-self-center">
+          <h4 class="text-center font-info text-uppercase">Mapa do Site</h4>
+          <p class="font-text">Site Map</p>
+          <p class="font-text">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="text-center font-info text-uppercase"><strong>Portal Belenzinho SP</strong><br>&nbsp;São Paulo - SP (11) 96125-8866 WhatsApp&nbsp;</p>
+          <p class="font-text">Fale Conosco&nbsp;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <p class="text-footer">2018© MRodriguesTI - Todos os direitos reservados</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <router-outlet></router-outlet>
