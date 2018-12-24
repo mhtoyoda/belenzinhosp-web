@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../service/http.service';
+import { Banner } from '../banner/banner';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
+    this.http.post('https://reqres.in/api/users', {'name': 'morpheus', 'job': 'leader'}).subscribe(resposta => {
+      console.log(resposta);
+    });
   }
 
 }
