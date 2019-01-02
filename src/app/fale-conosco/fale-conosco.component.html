@@ -7,12 +7,31 @@
       <app-banner></app-banner>
     </div>
     <div class="col-md-6 main-text">
-      <div style="text-align: center;">
-
-      </div>
-      <div class="col-md-3 banner_right">
-        <app-banner-main></app-banner-main>
-      </div>
+      <form (submit)="sendMessage($event)" method="POST">
+        <div class="form-group">
+          <label class="label">Nome:</label>
+          <input type="text" class="form-control" [value]="name" (input)="name = $event.target.value">
+        </div>
+        <div class="form-group">
+          <label>E-mail:</label><span class="text-required">*</span>
+          <input type="text" class="form-control" [value]="email" (input)="email = $event.target.value">
+        </div>
+        <div class="form-group">
+          <label>Assunto:</label>
+          <input type="text" class="form-control" [value]="subject" (input)="subject = $event.target.value">
+        </div>
+        <div class="form-group">
+          <label>Mensagem:</label><span class="text-required">*</span>
+          <textarea type="text" class="form-control" (input)="message = $event.target.value">{{message}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        <p class="contact-required">Todos os campos marcados com <span class="text-required">*</span> são obrigatórios</p>
+      </form>
     </div>
-    <app-info></app-info>
-    <app-footer></app-footer>
+    <div class="col-md-3 banner_right">
+      <app-banner-main></app-banner-main>
+    </div>
+  </div>
+</div>
+<app-info></app-info>
+<app-footer></app-footer>

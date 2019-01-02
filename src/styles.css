@@ -6488,6 +6488,13 @@ header{
     font-size: 0.9em;
     color: RGB(0,0,0);
 }
+.text-required{
+  color: #b31020;
+}
+.contact-required{
+  font-size: 0.7em;
+  margin-top: 5px;
+}
 @media (max-width: 425px) {
     .btn-social-icon{
         font-size: 0.6em;
