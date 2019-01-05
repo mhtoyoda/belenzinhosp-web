@@ -6495,13 +6495,33 @@ header{
   font-size: 0.7em;
   margin-top: 5px;
 }
+.section-content{
+  text-align: left; 
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-title{
+  font-weight: bold;
+}
+.font-mention{
+  text-align: center;
+  font-style: italic; 
+  font-weight: bold;
+}
+.text-doc{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+}
+
+
 @media (max-width: 425px) {
     .btn-social-icon{
         font-size: 0.6em;
     }
     .align-self-center{
         margin-top: 10px !important;
-    }
+    }    
 }
 @media (max-width: 320px) {
     .btn-social-icon{
@@ -6554,6 +6574,10 @@ header{
     }
     .text{
         font-size: 0.7em;
+    }
+    .text-doc{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.75em;
     }
 }
 @media (min-width: 769px) {

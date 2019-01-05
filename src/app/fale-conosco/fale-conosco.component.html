@@ -3,32 +3,35 @@
 <app-search></app-search>
 <div class="container main-content">
   <div class="row">
-    <div class="col-md-3 banner">
+    <div class="col-md-3 col-sm-3 banner">
       <app-banner></app-banner>
     </div>
-    <div class="col-md-6 main-text">
-      <form (submit)="sendMessage($event)" method="POST">
-        <div class="form-group">
-          <label class="label">Nome:</label>
-          <input type="text" class="form-control" [value]="name" (input)="name = $event.target.value">
-        </div>
-        <div class="form-group">
-          <label>E-mail:</label><span class="text-required">*</span>
-          <input type="text" class="form-control" [value]="email" (input)="email = $event.target.value">
-        </div>
-        <div class="form-group">
-          <label>Assunto:</label>
-          <input type="text" class="form-control" [value]="subject" (input)="subject = $event.target.value">
-        </div>
-        <div class="form-group">
-          <label>Mensagem:</label><span class="text-required">*</span>
-          <textarea type="text" class="form-control" (input)="message = $event.target.value">{{message}}</textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-        <p class="contact-required">Todos os campos marcados com <span class="text-required">*</span> são obrigatórios</p>
-      </form>
+    <div class="col-md-6 col-sm-6 main-text">
+      <div class="form-fale-conosco">
+        <form (submit)="sendMessage($event)" method="POST">          
+            <div class="form-group">
+              <label class="text-doc" for="name">Nome:</label>
+              <input type="text" id="name" class="form-control" [value]="name" (input)="name = $event.target.value">
+            </div>          
+            <div class="form-group">
+              <label class="text-doc" for="email">E-mail:</label><span class="text-required">*</span>
+              <input type="email" id="email" class="form-control" [value]="email" (input)="email = $event.target.value">
+            </div>          
+            <div class="form-group">
+              <label class="text-doc" for="assunto">Assunto:</label>
+              <input type="text" id="assunto" class="form-control" [value]="subject" (input)="subject = $event.target.value">
+            </div>          
+            <div class="form-group">
+              <label class="text-doc" for="mensagem">Mensagem:</label><span class="text-required">*</span>
+              <textarea type="text" id="mensagem" class="form-control" (input)="message = $event.target.value">{{message}}</textarea>
+            </div>          
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+          <p class="contact-required">Todos os campos marcados com <span class="text-required">*</span> são
+            obrigatórios</p>
+        </form>
+      </div>
     </div>
-    <div class="col-md-3 banner_right">
+    <div class="col-md-3 col-sm-3 banner_right">
       <app-banner-main></app-banner-main>
     </div>
   </div>
