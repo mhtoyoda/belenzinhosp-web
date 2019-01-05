@@ -6521,6 +6521,13 @@ header{
 .link-fale-conosco{
   text-align: center;
 }
+.text-align-center{
+  text-align: center; 
+  margin-bottom: 0px;
+}
+.text-item{
+  margin-bottom: 0px;
+}
 
 @media (max-width: 425px) {
     .btn-social-icon{
