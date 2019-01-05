@@ -6528,6 +6528,9 @@ header{
 .text-item{
   margin-bottom: 0px;
 }
+.text-bold{
+  font-weight: bold;
+}
 
 @media (max-width: 425px) {
     .btn-social-icon{
