@@ -6513,7 +6513,14 @@ header{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
 }
-
+.text-link{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(47, 119, 172);
+  font-weight: bold;
+}
+.link-fale-conosco{
+  text-align: center;
+}
 
 @media (max-width: 425px) {
     .btn-social-icon{
