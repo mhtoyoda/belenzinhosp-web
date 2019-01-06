@@ -17,6 +17,7 @@ import { AnuncieAquiComponent } from './anuncie-aqui/anuncie-aqui.component';
 import { PrivacidadeComponent } from './privacidade/privacidade.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ServicosComponent } from './servicos/servicos.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ServicosComponent } from './servicos/servicos.component';
     AnuncieAquiComponent,
     PrivacidadeComponent,
     QuemSomosComponent,
-    ServicosComponent
+    ServicosComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

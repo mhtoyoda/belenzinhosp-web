@@ -6359,7 +6359,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 html, body {
   height: 100%; }
-
+ul li{
+  list-style: none;
+}
 .bg-primary {
   color: #212529; }
   .bg-primary input::placeholder {
@@ -6531,7 +6533,22 @@ header{
 .text-bold{
   font-weight: bold;
 }
-
+.item-resultado{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+ul.item-list{
+  padding-left: 0;  
+}
+p.text-item{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+}
+a.text-item{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9em;
+}
 @media (max-width: 425px) {
     .btn-social-icon{
         font-size: 0.6em;
@@ -6596,6 +6613,14 @@ header{
     .text-title{
         font-weight: bold;
         font-size: 0.75em;
+    }
+    p.text-item{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.7em;
+    }
+    a.text-item{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.8em;
     }
 }
 @media (min-width: 769px) {
