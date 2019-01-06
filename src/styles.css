@@ -6538,7 +6538,7 @@ header{
     }
     .align-self-center{
         margin-top: 10px !important;
-    }    
+    }
 }
 @media (max-width: 320px) {
     .btn-social-icon{
@@ -6550,9 +6550,6 @@ header{
         font-size: 1em;
     }
 }
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
-
 @media (max-width: 768px) {
     .text-uppercase{
         text-transform: uppercase !important;
@@ -6594,6 +6591,10 @@ header{
     }
     .text-doc{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.7em;
+    }
+    .text-title{
+        font-weight: bold;
         font-size: 0.75em;
     }
 }
