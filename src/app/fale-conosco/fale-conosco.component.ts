@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { HttpService } from '../service/http.service';
 
 @Component({
   selector: 'app-fale-conosco',
@@ -15,7 +16,7 @@ export class FaleConoscoComponent {
 
   formFaleConosco: FormGroup;
 
-  constructor(formBuilder: FormBuilder) {
+  constructor(private http: HttpService, formBuilder: FormBuilder) {
     this.formFaleConosco = formBuilder.group({
       name: '',
       email: ['', Validators.compose(
@@ -29,7 +30,9 @@ export class FaleConoscoComponent {
   }
   sendMessage(event: Event) {
     event.preventDefault();
-    console.log(this);
+    this.http.post('http://localhost:8080/api/email', {'email': this.email, 'message': this.message, 'subject': this.subject}).subscribe(resposta => {
+      console.log(resposta);
+    });
   }
 
 }
