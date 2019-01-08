@@ -23,7 +23,8 @@ export class FaleConoscoComponent {
         Validators.email]
       )],
       subject: '',
-      message:  ['', Validators.required]
+      message:  ['', Validators.required],
+      recaptchaReactive: ['', Validators.required]
     });
   }
   sendMessage(event: Event) {

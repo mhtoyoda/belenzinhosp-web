@@ -1,4 +1,4 @@
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './service/http.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -19,7 +19,8 @@ import { PrivacidadeComponent } from './privacidade/privacidade.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { ItemComponent } from './item/item.component';
-import { from } from 'rxjs';
+import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 @NgModule({
   declarations: [
@@ -44,9 +45,17 @@ import { from } from 'rxjs';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
+    ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
-  providers: [HttpService],
+  providers: [HttpService, {
+    provide: RECAPTCHA_SETTINGS,
+    useValue: {
+      /*siteKey: '6LfW6YcUAAAAAFkEpSz5QAT-bX3R_VeDckoxfm83', real sitekey para dominio belenzinhosp.com.br*/
+      siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+    } as RecaptchaSettings,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
