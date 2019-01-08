@@ -30,6 +30,7 @@ export class FaleConoscoComponent {
   }
   sendMessage(event: Event) {
     event.preventDefault();
+    // tslint:disable-next-line:max-line-length
     this.http.post('http://localhost:8080/api/email', {'email': this.email, 'message': this.message, 'subject': this.subject}).subscribe(resposta => {
       console.log(resposta);
     });
