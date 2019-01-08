@@ -8,24 +8,31 @@
     </div>
     <div class="col-md-6 col-sm-6 main-text">
       <div class="form-fale-conosco">
-        <form (submit)="sendMessage($event)" method="POST">          
+        <form (submit)="sendMessage($event)" method="POST" [formGroup]= "formFaleConosco">          
             <div class="form-group">
               <label class="text-doc" for="name">Nome:</label>
-              <input type="text" id="name" class="form-control" [value]="name" (input)="name = $event.target.value">
+              <input type="text" id="name" name="name" class="form-control" [(ngModel)]="name" formControlName="name">
             </div>          
             <div class="form-group">
               <label class="text-doc" for="email">E-mail:</label><span class="text-required">*</span>
-              <input type="email" id="email" class="form-control" [value]="email" (input)="email = $event.target.value">
+              <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" formControlName="email">              
+              <div *ngIf="formFaleConosco.controls['email'].dirty">
+                <span *ngIf="formFaleConosco.controls['email'].errors?.required" class="form-control alert-danger">Campo Obrigatório</span>
+                <span *ngIf="formFaleConosco.controls['email'].errors?.email" class="form-control alert-danger">Formato de E-mail Inválido</span>    
+              </div>
             </div>          
             <div class="form-group">
               <label class="text-doc" for="assunto">Assunto:</label>
-              <input type="text" id="assunto" class="form-control" [value]="subject" (input)="subject = $event.target.value">
+              <input type="text" id="assunto" name="subject" class="form-control" [(ngModel)]="subject" formControlName="subject">
             </div>          
             <div class="form-group">
               <label class="text-doc" for="mensagem">Mensagem:</label><span class="text-required">*</span>
-              <textarea type="text" id="mensagem" class="form-control" (input)="message = $event.target.value">{{message}}</textarea>
+              <textarea type="text" id="mensagem" name="message" class="form-control" [(ngModel)]="message"  formControlName="message"></textarea>
+              <div *ngIf="formFaleConosco.controls['message'].dirty">
+                <span *ngIf="formFaleConosco.controls['message'].errors?.required" class="form-control alert-danger">Campo Obrigatório</span>
+              </div>
             </div>          
-          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+          <button type="submit" class="btn btn-primary" [disabled]="formFaleConosco.invalid">Enviar Mensagem</button>
           <p class="contact-required">Todos os campos marcados com <span class="text-required">*</span> são
             obrigatórios</p>
         </form>

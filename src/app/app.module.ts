@@ -1,6 +1,7 @@
 import {HttpClientModule} from '@angular/common/http';
 import { HttpService } from './service/http.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { PrivacidadeComponent } from './privacidade/privacidade.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { ItemComponent } from './item/item.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ItemComponent } from './item/item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'})
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]
