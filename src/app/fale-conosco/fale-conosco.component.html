@@ -3,10 +3,10 @@
 <app-search></app-search>
 <div class="container main-content">
   <div class="row">
-    <div class="col-md-3 col-sm-3 banner">
+    <div class="col-md-3 banner order-last order-md-first order-sm-first">
       <app-banner></app-banner>
     </div>
-    <div class="col-md-6 col-sm-6 main-text">
+    <div class="col-md-6 col-sm-9 main-text">
       <div class="form-fale-conosco">
         <form (submit)="sendMessage($event)" method="POST" [formGroup]= "formFaleConosco">          
             <div class="form-group">
@@ -41,7 +41,7 @@
         </form>
       </div>
     </div>
-    <div class="col-md-3 col-sm-3 banner_right">
+    <div class="col-md-3 banner_right order-last order-md-last order-sm-last">
       <app-banner-main></app-banner-main>
     </div>
   </div>

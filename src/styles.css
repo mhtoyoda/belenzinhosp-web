@@ -6626,6 +6626,12 @@ div.captcha{
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-size: 0.8em;
     }
+    div.banner{
+      max-width: 45%;
+    }
+    div.banner_right{
+      max-width: 45%;      
+    }
 }
 @media (min-width: 769px) {
     a.nav-link{
