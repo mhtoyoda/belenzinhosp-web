@@ -22,6 +22,7 @@ import { ItemComponent } from './item/item.component';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     PrivacidadeComponent,
     QuemSomosComponent,
     ServicosComponent,
-    ItemComponent
+    ItemComponent,
+    ResultadoComponent
   ],
   imports: [
     BrowserModule,

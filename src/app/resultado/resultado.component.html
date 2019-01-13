@@ -1,0 +1,26 @@
+<app-header></app-header>
+<app-menu></app-menu>
+<app-search></app-search>
+<div class="container main-content">
+  <div class="row">
+    <div class="col-md-3 banner order-last order-md-first order-sm-first">
+      <app-banner></app-banner>
+    </div>
+    <div class="col-md-6 main-text">
+      <div class="card text-center border-0">
+        <div class="card-body">          
+          <div class="item-resultado" *ngFor="let item of itens | slice: pageSize | slice: 0:itemsPerPage">
+            <app-item nome={{item.nome}} nomeFantasia={{item.nomeFantasia}} endereco={{item.endereco}} telefone={{item.telefone}} horarioAbertura={{item.horarioAbertura}}
+              horarioFechamento={{item.horarioFechamento}} url={{item.url}}></app-item>
+          </div>          
+          <ngb-pagination class="d-flex justify-content-center" [collectionSize]="itens.length" #numPages [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 banner_right order-last order-md-last order-sm-last">
+      <app-banner-main></app-banner-main>
+    </div>
+  </div>
+</div>
+<app-info></app-info>
+<app-footer></app-footer>

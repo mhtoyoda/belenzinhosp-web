@@ -1,22 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
   template: `
-              <div class="item-resultado">
-                <h5 style="font-weight: bold;">Pizzaria Belém(nome_ativ_com)</h5>
-                <ul class="item-list">
-                  <li><p class="text-item">PIZZARIA BELÉM (nfantasia_empr)</p></li>
-                  <li><p class="text-item">Av Álvaro Ramos 205 (end_empr)</p></li>
-                  <li><p class="text-item">Tel.: 3232-3232 Abre: 18h  Fecha: 24h (tel1_empr; abre_empr; fecha_empr)</p></li>
-                  <li>
-                  <a class="text-item" target="_blank" rel="noopener noreferrer" href="#">www.pizzariabelem.com.br    (website_empr)</a>
-                  </li>
-                </ul>
-              </div>
+              <h5 style="font-weight: bold;">{{nome}}</h5>
+              <ul class="item-list">
+                <li><p class="text-item">{{nomeFantasia}}</p></li>
+                <li><p class="text-item">{{endereco}}</p></li>
+                <li><p class="text-item">Tel.: {{telefone}} Abre: {{horarioAbertura}}  Fecha: {{horarioFechamento}}</p></li>
+                <li>
+                <a class="text-item" target="_blank" href="#">{{url}}</a>
+                </li>
+              </ul>
             `
 })
 export class ItemComponent implements OnInit {
+
+  @Input() nome: string;
+  @Input() nomeFantasia: string;
+  @Input() endereco: string;
+  @Input() telefone: string;
+  @Input() horarioAbertura: string;
+  @Input() horarioFechamento: string;
+  @Input() url: string;
 
   constructor() { }
 
