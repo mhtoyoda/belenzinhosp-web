@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
-import { Banner } from '../banner/banner';
 
 @Component({
   selector: 'app-list',

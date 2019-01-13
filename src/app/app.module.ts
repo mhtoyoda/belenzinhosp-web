@@ -21,6 +21,7 @@ import { ServicosComponent } from './servicos/servicos.component';
 import { ItemComponent } from './item/item.component';
 import { RecaptchaModule, RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
     FormsModule,
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
+    NgbModule
   ],
   providers: [HttpService, {
     provide: RECAPTCHA_SETTINGS,
