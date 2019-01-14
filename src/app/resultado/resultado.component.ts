@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { HttpService } from '../service/http.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-resultado',
@@ -7,121 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadoComponent implements OnInit {
 
-  itens: any[] = [
-    {
-      nome: 'teste1',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste2',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste3',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste4',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste5',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste6',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste7',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste8',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste9',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste10',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste11',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    },
-    {
-      nome: 'teste12',
-      nomeFantasia: 'Pizzaria',
-      endereco: 'Rua Paulista, 30',
-      telefone: '11 - 90900201',
-      horarioAbertura: '18:00',
-      horarioFechamento: '23:59',
-      url: 'www.uol.com.br'
-    }
-  ];
+  itens: any[] = [];
   currentPage = 1;
   itemsPerPage = 8;
   pageSize: number;
+  type: string;
+  term: string;
 
-  constructor() { }
+  constructor(private http: HttpService, private route: ActivatedRoute, private ref: ChangeDetectorRef, private router: Router) {
+    this.route.params.subscribe(params => {
+      this.type = params.type;
+      this.term = params.term;
+      // tslint:disable-next-line:max-line-length
+      this.http.get('http://localhost:8080/api/search?type=' + this.type + '&term=' + this.term).subscribe(resposta =>
+      this.itens = resposta);
+    });
+  }
 
   ngOnInit() {
   }

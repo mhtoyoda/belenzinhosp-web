@@ -10,10 +10,6 @@ export class ListComponent implements OnInit {
 
   constructor(private http: HttpService) { }
 
-  ngOnInit() {
-    this.http.post('https://reqres.in/api/users', {'name': 'morpheus', 'job': 'leader'}).subscribe(resposta => {
-      console.log(resposta);
-    });
-  }
+  ngOnInit() {}
 
 }

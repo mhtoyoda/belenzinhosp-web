@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpService } from '../service/http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fale-conosco',
@@ -13,10 +14,11 @@ export class FaleConoscoComponent {
   @Input() email: string;
   @Input() subject: string;
   @Input() message: string;
+  mensagem = '';
 
   formFaleConosco: FormGroup;
 
-  constructor(private http: HttpService, formBuilder: FormBuilder) {
+  constructor(private http: HttpService, formBuilder: FormBuilder, private router: Router) {
     this.formFaleConosco = formBuilder.group({
       name: '',
       email: ['', Validators.compose(
@@ -24,15 +26,23 @@ export class FaleConoscoComponent {
         Validators.email]
       )],
       subject: '',
-      message:  ['', Validators.required],
+      message: ['', Validators.required],
       recaptchaReactive: ['', Validators.required]
     });
   }
   sendMessage(event: Event) {
     event.preventDefault();
     // tslint:disable-next-line:max-line-length
-    this.http.post('http://localhost:8080/api/email', {'email': this.email, 'message': this.message, 'subject': this.subject}).subscribe(resposta => {
-      console.log(resposta);
+    this.http.post('http://localhost:8080/api/email', { 'email': this.email, 'message': this.message, 'subject': this.subject }).subscribe(resposta => {
+      if (resposta.status === 'OK') {
+        this.mensagem = 'Mensagem enviada com sucesso';
+        setTimeout(
+          () => this.router.navigate(['']), 8000);
+      } else {
+        this.mensagem = 'Ocorreu um problema, tente novamente mais tarde!';
+        setTimeout(
+          () => this.router.navigate(['']), 8000);
+      }
     });
   }
 

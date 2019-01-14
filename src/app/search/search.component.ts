@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -11,7 +12,7 @@ export class SearchComponent implements OnInit {
   @Input() termTipoNegocio = '';
   @Input() termPrestador = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,7 +24,7 @@ export class SearchComponent implements OnInit {
   }
 
   consultarEmpresa = () => {
-     console.log('Teste1: ' + this.termEmpresa.toUpperCase());
+    this.router.navigate(['/resultado', 'empresa', this.termEmpresa]);
   }
 
   consultarTipoNegocio = () => {

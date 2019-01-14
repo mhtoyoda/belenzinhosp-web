@@ -8,6 +8,7 @@
     </div>
     <div class="col-md-6 col-sm-9 main-text">
       <div class="form-fale-conosco">
+        <p *ngIf="mensagem" class="alert alert-info">{{mensagem}}</p>
         <form (submit)="sendMessage($event)" method="POST" [formGroup]= "formFaleConosco">          
             <div class="form-group">
               <label class="text-doc" for="name">Nome:</label>

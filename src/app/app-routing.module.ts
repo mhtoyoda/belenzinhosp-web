@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'privacidade', component: PrivacidadeComponent},
   {path: 'quemSomos', component: QuemSomosComponent},
   {path: 'servicos', component: ServicosComponent},
-  {path: 'resultado', component: ResultadoComponent},
+  {path: 'resultado/:type/:term', component: ResultadoComponent},
   {path: '**', redirectTo: ''}
 ];
 
