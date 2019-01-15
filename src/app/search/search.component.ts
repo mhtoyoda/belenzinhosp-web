@@ -28,10 +28,10 @@ export class SearchComponent implements OnInit {
   }
 
   consultarTipoNegocio = () => {
-     console.log('Teste2: ' + this.termTipoNegocio.toUpperCase());
+     this.router.navigate(['/resultado', 'tiponegocio', this.termTipoNegocio]);
   }
 
   consultarPrestador = () => {
-     console.log('Teste3: ' + this.termPrestador.toUpperCase());
+     this.router.navigate(['/resultado', 'prestadorservico', this.termPrestador]);
   }
 }
