@@ -10,8 +10,13 @@
       <div class="card text-center border-0">
         <div class="card-body">          
           <div class="item-resultado" *ngFor="let item of itens | slice: pageSize | slice: 0:itemsPerPage">
-            <app-item nome={{item.nome}} nomeFantasia={{item.nomeFantasia}} endereco={{item.endereco}} telefone={{item.telefone}} horarioAbertura={{item.horarioAbertura}}
-              horarioFechamento={{item.horarioFechamento}} url={{item.url}}></app-item>
+            <div *ngIf="type === 'prestadorservico';else empresa">
+                <app-item-prestador nome={{item.nome}} endereco={{item.endereco}} celular={{item.celular}} url={{item.url}} redesocial={{item.redeSocial}}></app-item-prestador>
+            </div>
+            <ng-template #empresa>
+                <app-item nome={{item.nome}} nomeFantasia={{item.nomeFantasia}} endereco={{item.endereco}} telefone={{item.telefone}} horarioAbertura={{item.horarioAbertura}}
+              horarioFechamento={{item.horarioFechamento}} url={{item.url}} redesocial={{item.redeSocial}}></app-item>
+            </ng-template>            
           </div>          
           <ngb-pagination class="d-flex justify-content-center" [collectionSize]="itens.length" #numPages [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
         </div>
