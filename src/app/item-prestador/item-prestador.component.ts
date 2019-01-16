@@ -9,10 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
                 <li><p class="text-item">{{endereco}}</p></li>
                 <li><p class="text-item">Whatsapp.: {{celular}}</p></li>
                 <li>
-                <a class="text-item" target="_blank" href="#">{{url}}</a>
+                <a class="text-item" target="_blank" href="{{url}}" (click)="countClick()">{{url}}</a>
                 </li>
                 <li>
-                <a class="text-item" target="_blank" href="#">{{redesocial}}</a>
+                <a class="text-item" target="_blank" href="{{redesocial}}" (click)="countClick()">{{redesocial}}</a>
                 </li>
               </ul>
             `
@@ -30,4 +30,7 @@ export class ItemPrestadorComponent implements OnInit {
   ngOnInit() {
   }
 
+  countClick = () => {
+    console.log('Clicou!');
+  }
 }
