@@ -6565,6 +6565,10 @@ div.captcha{
     .btn-social-icon{
         font-size: 0.5em;
     }
+    .media-social{
+        max-width: 100%;
+        overflow: auto;
+    }
 }
 @media (min-width: 1440px) {
     .btn-social-icon{

@@ -7,6 +7,7 @@ import { PrivacidadeComponent } from './privacidade/privacidade.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { ServicosComponent } from './servicos/servicos.component';
 import { ResultadoComponent } from './resultado/resultado.component';
+import { FormularioPrestadorComponent } from './formulario-prestador/formulario-prestador.component';
 
 const routes: Routes = [
   {path: '', component: ListComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'quemSomos', component: QuemSomosComponent},
   {path: 'servicos', component: ServicosComponent},
   {path: 'resultado/:type/:term', component: ResultadoComponent},
+  {path: 'prestador', component: FormularioPrestadorComponent},
   {path: '**', redirectTo: ''}
 ];
 

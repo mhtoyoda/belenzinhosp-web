@@ -24,6 +24,7 @@ import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ResultadoComponent } from './resultado/resultado.component';
 import { ItemPrestadorComponent } from './item-prestador/item-prestador.component';
+import { FormularioPrestadorComponent } from './formulario-prestador/formulario-prestador.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ItemPrestadorComponent } from './item-prestador/item-prestador.componen
     ServicosComponent,
     ItemComponent,
     ResultadoComponent,
-    ItemPrestadorComponent
+    ItemPrestadorComponent,
+    FormularioPrestadorComponent
   ],
   imports: [
     BrowserModule,
