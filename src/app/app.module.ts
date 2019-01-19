@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './service/http.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -57,7 +58,7 @@ import { FormularioPrestadorComponent } from './formulario-prestador/formulario-
     RecaptchaFormsModule,
     NgbModule
   ],
-  providers: [HttpService, {
+  providers: [DatePipe, HttpService, {
     provide: RECAPTCHA_SETTINGS,
     useValue: {
       /*siteKey: '6LfW6YcUAAAAAFkEpSz5QAT-bX3R_VeDckoxfm83', real sitekey para dominio belenzinhosp.com.br*/

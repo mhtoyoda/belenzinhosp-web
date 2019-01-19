@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpService } from '../service/http.service';
 import { Router } from '@angular/router';
 import { KeyValue } from './keyValue';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-formulario-prestador',
@@ -16,24 +18,21 @@ export class FormularioPrestadorComponent implements OnInit {
   mensagem: string;
   logradouros: KeyValue[] = [];
   atividades: KeyValue[] = [];
-  dataCadastro = '17/01/2019';
+  dataCadastro: string;
 
   @Input() nome: string;
   @Input() logradouro: string;
   @Input() numero: string;
-  @Input() bairro: string;
-  @Input() cep: string;
   @Input() cpf: string;
   @Input() atividadeProfissional: string;
   @Input() telefone: string;
   @Input() celular: string;
-  @Input() avaliacao: string;
   @Input() linkedin: string;
   @Input() facebook: string;
   @Input() website: string;
   @Input() observacao: string;
 
-  constructor(private http: HttpService, formBuilder: FormBuilder, private router: Router) {
+  constructor(private http: HttpService, formBuilder: FormBuilder, private router: Router, private datePipe: DatePipe) {
     this.http.get('http://localhost:8080/api/atividade-profissional').subscribe(resposta =>
       this.atividades = resposta);
 
@@ -44,13 +43,10 @@ export class FormularioPrestadorComponent implements OnInit {
       nome: ['', Validators.required],
       logradouro: ['', Validators.required],
       numero: ['', Validators.required],
-      bairro: ['', Validators.required],
-      cep: ['', Validators.required],
       cpf: '',
       atividadeProfissional: ['', Validators.required],
       telefone: '',
       celular: ['', Validators.required],
-      avaliacao: '',
       dataCadastro: '',
       linkedin: '',
       facebook: '',
@@ -59,7 +55,9 @@ export class FormularioPrestadorComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.dataCadastro = this.datePipe.transform(new Date(), 'dd/MM/yyyy');
+  }
 
   cadastrarPrestador = (event: Event) => {
     event.preventDefault();
