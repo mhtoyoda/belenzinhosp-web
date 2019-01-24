@@ -15,14 +15,20 @@ export class ResultadoComponent implements OnInit {
   pageSize: number;
   type: string;
   term: string;
+  mensagem = '';
 
   constructor(private http: HttpService, private route: ActivatedRoute, private ref: ChangeDetectorRef, private router: Router) {
     this.route.params.subscribe(params => {
       this.type = params.type;
       this.term = params.term;
       // tslint:disable-next-line:max-line-length
-      this.http.get('http://localhost:8080/api/search?type=' + this.type + '&term=' + this.term).subscribe(resposta =>
-      this.itens = resposta);
+      this.http.get('http://localhost:8080/api/search?type=' + this.type + '&term=' + this.term).subscribe(resposta => {
+       this.mensagem = '';
+       this.itens = resposta;
+       if (this.itens.length <= 0) {
+         this.mensagem = 'Não existem registros para a consulta';
+       }
+      });
     });
   }
 

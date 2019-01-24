@@ -17,8 +17,11 @@
                 <app-item nome={{item.nome}} nomeFantasia={{item.nomeFantasia}} endereco={{item.endereco}} telefone={{item.telefone}} horarioAbertura={{item.horarioAbertura}}
               horarioFechamento={{item.horarioFechamento}} url={{item.url}} redesocial={{item.redeSocial}}></app-item>
             </ng-template>            
-          </div>          
-          <ngb-pagination class="d-flex justify-content-center" [collectionSize]="itens.length" #numPages [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
+          </div>
+          <p *ngIf="mensagem;else pagination" class="alert alert-info">{{mensagem}}</p>          
+          <ng-template #pagination>
+            <ngb-pagination class="d-flex justify-content-center" [collectionSize]="itens.length" #numPages [pageSize]="itemsPerPage" [(page)]="currentPage" (pageChange)="onPageChange(currentPage)"></ngb-pagination>
+          </ng-template>          
         </div>
       </div>
     </div>
