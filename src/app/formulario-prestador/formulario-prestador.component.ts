@@ -66,9 +66,8 @@ export class FormularioPrestadorComponent implements OnInit {
     'celular': this.celular, 'dataCadastroPrestador': this.dataCadastro,
     'linkedinPrestador': this.linkedin, 'facebookPrestador': this.facebook,
     'websitePrestador': this.website, 'observacao': this.observacao }).subscribe(resposta => {
-      console.log(resposta);
       if (resposta.sucess) {
-        this.mensagem = 'Prestador Cadastrado com sucesso!';
+        this.mensagem = 'Prestador de Serviços Cadastrado com sucesso!';
         setTimeout(
           () => this.router.navigate(['']), 5000);
       } else {

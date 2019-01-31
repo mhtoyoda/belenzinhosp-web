@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxMaskModule } from 'ngx-mask';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
@@ -56,7 +57,8 @@ import { FormularioPrestadorComponent } from './formulario-prestador/formulario-
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: 'never' }),
     RecaptchaModule,
     RecaptchaFormsModule,
-    NgbModule
+    NgbModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [DatePipe, HttpService, {
     provide: RECAPTCHA_SETTINGS,
