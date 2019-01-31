@@ -5,7 +5,9 @@ import { Banner } from './banner';
   selector: 'app-banner',
   styleUrls: ['./banner.component.css'],
   template : `
-                <img *ngFor="let banner of banners" class="img-fluid d-block img-thumbnail" [src]="banner.url" [alt]="banner.description">
+                <a href="#" *ngFor="let banner of banners">
+                  <img class="img-fluid d-block img-thumbnail" [src]="banner.url" [alt]="banner.description">
+                </a>
               `
 })
 

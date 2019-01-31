@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-banner-main',
   template: `
-              <img class="d-block img-fluid img-thumbnail mx-auto" [src]="url" [alt]= "description">
+              <a href="#">
+                <img class="d-block img-fluid img-thumbnail mx-auto" [src]="url" [alt]= "description">
+              </a>
             `,
   styleUrls: ['./banner-main.component.css']
 })
