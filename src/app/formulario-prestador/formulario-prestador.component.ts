@@ -61,6 +61,19 @@ export class FormularioPrestadorComponent implements OnInit {
 
   cadastrarPrestador = (event: Event) => {
     event.preventDefault();
-
+    // tslint:disable-next-line:max-line-length
+    this.http.post('http://localhost:8080/api/prestador-servico', { 'name': this.nome, 'logradouroId': this.logradouro, 'numero': this.numero, 'cpf': this.cpf, 'atividadePrestadorId': this.atividadeProfissional, 'telefone': this.telefone,
+    'celular': this.celular, 'dataCadastroPrestador': this.dataCadastro,
+    'linkedinPrestador': this.linkedin, 'facebookPrestador': this.facebook,
+    'websitePrestador': this.website, 'observacao': this.observacao }).subscribe(resposta => {
+      console.log(resposta);
+      if (resposta.sucess) {
+        this.mensagem = 'Prestador Cadastrado com sucesso!';
+        setTimeout(
+          () => this.router.navigate(['']), 5000);
+      } else {
+        this.mensagem = 'Ocorreu um problema, tente novamente mais tarde!';
+      }
+    });
   }
 }

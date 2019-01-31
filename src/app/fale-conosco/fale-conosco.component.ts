@@ -40,8 +40,6 @@ export class FaleConoscoComponent {
           () => this.router.navigate(['']), 8000);
       } else {
         this.mensagem = 'Ocorreu um problema, tente novamente mais tarde!';
-        setTimeout(
-          () => this.router.navigate(['']), 8000);
       }
     });
   }
