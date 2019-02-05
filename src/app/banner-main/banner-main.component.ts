@@ -1,19 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { Banner } from '../banner/banner';
+import { HttpService } from '../service/http.service';
 
 @Component({
   selector: 'app-banner-main',
   template: `
-              <a href="#">
-                <img class="d-block img-fluid img-thumbnail mx-auto" [src]="url" [alt]= "description">
+              <a [href]="banner.link" target="_blank" *ngFor="let banner of banners">
+                  <img class="img-fluid d-block img-thumbnail" [src]="banner.url" [alt]="banner.description">
               </a>
             `,
   styleUrls: ['./banner-main.component.css']
 })
 export class BannerMainComponent implements OnInit {
 
-  url = 'assets/img/banner_direita.jpg';
-  description = 'Banner Direita';
-  constructor() { }
+  banners: Banner[] = [];
+
+  constructor(private http: HttpService) {
+    this.http.get('http://localhost:8080/api/banner/right').subscribe(resposta => {
+      resposta.forEach(banner => {
+        // tslint:disable-next-line:no-unused-expression
+        this.banners.push(new Banner(banner.imagem, banner.clienteBanner, banner.link));
+      });
+    }
+    );
+  }
 
   ngOnInit() {
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
+import { Noticia } from './noticia';
 
 @Component({
   selector: 'app-list',
@@ -8,8 +9,15 @@ import { HttpService } from '../service/http.service';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private http: HttpService) { }
+  noticias: Noticia[] = [];
 
-  ngOnInit() {}
+  constructor(private http: HttpService) {
+    this.http.get('http://localhost:8080/api/noticias').subscribe(resposta => {
+      this.noticias = resposta;
+    }
+    );
+  }
+
+  ngOnInit() { }
 
 }

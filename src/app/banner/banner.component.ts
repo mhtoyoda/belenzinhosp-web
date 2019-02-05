@@ -1,11 +1,12 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Banner } from './banner';
+import { HttpService } from '../service/http.service';
 
 @Component({
   selector: 'app-banner',
   styleUrls: ['./banner.component.css'],
-  template : `
-                <a href="#" *ngFor="let banner of banners">
+  template: `
+                <a [href]="banner.link" target="_blank" *ngFor="let banner of banners">
                   <img class="img-fluid d-block img-thumbnail" [src]="banner.url" [alt]="banner.description">
                 </a>
               `
@@ -13,15 +14,18 @@ import { Banner } from './banner';
 
 export class BannerComponent implements OnInit {
 
-  banners: Banner[] = [
-    new Banner('assets/img/arte_bann.jpg', 'Arte'),
-    new Banner('assets/img/destaque_cadastro.jpg', 'Destaque'),
-    new Banner('assets/img/geolocalizadas.jpg', 'Geolocalizadas')
-  ];
+  banners: Banner[] = [];
 
-  constructor() {}
+  constructor(private http: HttpService) {
+    this.http.get('http://localhost:8080/api/banner/left').subscribe(resposta => {
+      resposta.forEach(banner => {
+        // tslint:disable-next-line:no-unused-expression
+        this.banners.push(new Banner(banner.imagem, banner.clienteBanner, banner.link));
+      });
+    }
+    );
+  }
 
   ngOnInit() {
   }
-
 }

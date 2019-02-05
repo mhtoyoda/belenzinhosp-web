@@ -4,7 +4,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpService } from '../service/http.service';
 import { Router } from '@angular/router';
 import { KeyValue } from './keyValue';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-formulario-prestador',
