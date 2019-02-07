@@ -17,7 +17,7 @@ export class BannerComponent implements OnInit {
   banners: Banner[] = [];
 
   constructor(private http: HttpService) {
-    this.http.get('http://localhost:8080/api/banner/left').subscribe(resposta => {
+    this.http.get('http://18.228.163.212:8080/api/banner/left').subscribe(resposta => {
       resposta.forEach(banner => {
         // tslint:disable-next-line:no-unused-expression
         this.banners.push(new Banner(banner.imagem, banner.clienteBanner, banner.link));

@@ -32,10 +32,10 @@ export class FormularioPrestadorComponent implements OnInit {
   @Input() observacao: string;
 
   constructor(private http: HttpService, formBuilder: FormBuilder, private router: Router, private datePipe: DatePipe) {
-    this.http.get('http://localhost:8080/api/atividade-profissional').subscribe(resposta =>
+    this.http.get('http://18.228.163.212:8080/api/atividade-profissional').subscribe(resposta =>
       this.atividades = resposta);
 
-    this.http.get('http://localhost:8080/api/logradouro').subscribe(resposta =>
+    this.http.get('http://18.228.163.212:8080/api/logradouro').subscribe(resposta =>
       this.logradouros = resposta);
 
     this.formPrestadorServico = formBuilder.group({
@@ -61,7 +61,7 @@ export class FormularioPrestadorComponent implements OnInit {
   cadastrarPrestador = (event: Event) => {
     event.preventDefault();
     // tslint:disable-next-line:max-line-length
-    this.http.post('http://localhost:8080/api/prestador-servico', { 'name': this.nome, 'logradouroId': this.logradouro, 'numero': this.numero, 'cpf': this.cpf, 'atividadePrestadorId': this.atividadeProfissional, 'telefone': this.telefone,
+    this.http.post('http://18.228.163.212:8080/api/prestador-servico', { 'name': this.nome, 'logradouroId': this.logradouro, 'numero': this.numero, 'cpf': this.cpf, 'atividadePrestadorId': this.atividadeProfissional, 'telefone': this.telefone,
     'celular': this.celular, 'dataCadastroPrestador': this.dataCadastro,
     'linkedinPrestador': this.linkedin, 'facebookPrestador': this.facebook,
     'websitePrestador': this.website, 'observacao': this.observacao }).subscribe(resposta => {

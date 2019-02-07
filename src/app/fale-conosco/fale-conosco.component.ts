@@ -33,14 +33,14 @@ export class FaleConoscoComponent {
   sendMessage(event: Event) {
     event.preventDefault();
     // tslint:disable-next-line:max-line-length
-    this.http.post('http://localhost:8080/api/email', { 'email': this.email, 'message': this.message, 'subject': this.subject }).subscribe(resposta => {
+    this.http.post('http://18.228.163.212:8080/api/email', { 'email': this.email, 'message': this.message, 'subject': this.subject }).subscribe(resposta => {
       if (resposta.status === 'OK') {
         this.mensagem = 'Mensagem enviada com sucesso';
-        setTimeout(
-          () => this.router.navigate(['']), 8000);
       } else {
         this.mensagem = 'Ocorreu um problema, tente novamente mais tarde!';
       }
+        setTimeout(
+          () => this.router.navigate(['']), 5000);
     });
   }
 

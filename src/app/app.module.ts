@@ -63,8 +63,8 @@ import { FormularioPrestadorComponent } from './formulario-prestador/formulario-
   providers: [DatePipe, HttpService, {
     provide: RECAPTCHA_SETTINGS,
     useValue: {
-      /*siteKey: '6LfW6YcUAAAAAFkEpSz5QAT-bX3R_VeDckoxfm83', real sitekey para dominio belenzinhosp.com.br*/
-      siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+      siteKey: '6LfW6YcUAAAAAFkEpSz5QAT-bX3R_VeDckoxfm83', /*real sitekey para dominio belenzinhosp.com.br*/
+      /*siteKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',*/
     } as RecaptchaSettings,
   }],
   bootstrap: [AppComponent]

@@ -12,7 +12,7 @@ export class ListComponent implements OnInit {
   noticias: Noticia[] = [];
 
   constructor(private http: HttpService) {
-    this.http.get('http://localhost:8080/api/noticias').subscribe(resposta => {
+    this.http.get('http://18.228.163.212:8080/api/noticias').subscribe(resposta => {
       this.noticias = resposta;
     }
     );

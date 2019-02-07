@@ -22,7 +22,7 @@ export class ResultadoComponent implements OnInit {
       this.type = params.type;
       this.term = params.term;
       // tslint:disable-next-line:max-line-length
-      this.http.get('http://localhost:8080/api/search?type=' + this.type + '&term=' + this.term).subscribe(resposta => {
+      this.http.get('http://18.228.163.212:8080/api/search?type=' + this.type + '&term=' + this.term).subscribe(resposta => {
        this.mensagem = '';
        this.itens = resposta;
        if (this.itens.length <= 0) {
