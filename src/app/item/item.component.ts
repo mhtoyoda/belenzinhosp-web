@@ -3,7 +3,6 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-item',
   template: `
-              <h5 style="font-weight: bold;">{{nome}}</h5>
               <ul class="item-list">
                 <li><p class="text-item">{{nomeFantasia}}</p></li>
                 <li><p class="text-item">{{endereco}}</p></li>

@@ -3,7 +3,6 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-item-prestador',
   template: `
-              <h5 style="font-weight: bold;">{{nome}}</h5>
               <ul class="item-list">
                 <li><p class="text-item">{{nome}}</p></li>
                 <li><p class="text-item">{{endereco}}</p></li>

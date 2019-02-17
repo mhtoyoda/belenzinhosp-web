@@ -11,10 +11,11 @@
         <div class="card-body">
           <div *ngFor="let noticia of noticias">
             <p class="card-text text-center title">{{noticia.titulo}}
-            </p>
-            <p class="card-text text-left text">{{noticia.corpo}}
-            </p>
-          </div>
+            </p>            
+            <p class="card-text text-left text">{{noticia.corpo}} <a *ngIf="noticia?.website" class="more" target="_blank" href="{{noticia.website}}" (click)="countClick()">Acesse o Link</a>
+            </p>                        
+            <br>
+          </div>          
         </div>
       </div>
     </div>

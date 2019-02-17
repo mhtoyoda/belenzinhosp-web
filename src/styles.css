@@ -6484,11 +6484,12 @@ header{
 }
 .title{
     text-decoration: underline;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 .text{
-    font-size: 0.9em;
-    color: RGB(0,0,0);
+    font-size: 1em;
+    color: #000000;
 }
 .text-required{
   color: #b31020;
@@ -6548,6 +6549,12 @@ p.text-item{
 a.text-item{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.9em;
+}
+a.more{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9em;
+  color: #C0C0C0;
+  text-decoration: underline;
 }
 div.captcha{
   transform:scale(0.85);
