@@ -1,3 +1,3 @@
 export class Banner {
-    constructor(public url: string, public description: string, public link: string) {}
+    constructor(public url: string, public description: string, public link: string, public target: string) {}
 }
