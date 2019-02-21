@@ -6513,11 +6513,11 @@ header{
   font-weight: bold;
 }
 .text-doc{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Verdana, Helvetica, Calibri;
   font-size: 1.1em;
 }
 .text-link{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Verdana, Helvetica, Calibri;
   color: rgb(47, 119, 172);
   font-weight: bold;
 }
@@ -6543,15 +6543,15 @@ ul.item-list{
   padding-left: 0;  
 }
 p.text-item{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Verdana, Helvetica, Calibri;
   font-size: 0.9em;
 }
 a.text-item{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Verdana, Helvetica, Calibri;
   font-size: 1em;
 }
 a.more{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Arial, Verdana, Helvetica, Calibri;
   font-size: 1em;
   color: #C0C0C0;
   text-decoration: underline;
@@ -6585,16 +6585,17 @@ div.captcha{
 @media (max-width: 768px) {
     .text-uppercase{
         text-transform: uppercase !important;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     .font-text{
         text-align: center;
-        font-size:0.8em;
+        font-size:0.9em;
         margin-bottom: 4px;
+        font-family: Arial, Verdana, Helvetica, Calibri;
     }
     .text-footer{
         text-align: right;
-        font-size: 0.7em;
+        font-size: 0.75em;
     }
     .navbar-toggler{
         font-size: 0.8em !important;
@@ -6603,39 +6604,42 @@ div.captcha{
         font-size: 1em !important;
     }
     .font-info{
-        font-size:0.8em;
+        font-size:0.9em;
         margin-bottom: 3px;
     }
     ::-webkit-input-placeholder {
-        font-size: 0.8em !important;
+        font-size: 0.85em !important;
     }
     :-moz-placeholder { /* Firefox 18- */
-        font-size: 0.8em !important;
+        font-size: 0.85em !important;
     }
     ::-moz-placeholder {  /* Firefox 19+ */
-        font-size: 0.8em !important;
+        font-size: 0.85em !important;
     }
     .title{
-        font-size: 1em;
+        font-size: 1.1em;
+        font-family: Arial, Verdana, Helvetica, Calibri;
     }
     .text{
-        font-size: 0.8em;
+        font-size: 0.9em;
+        font-family: Arial, Verdana, Helvetica, Calibri;
     }
     .text-doc{
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 0.8em;
+        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-size: 0.9em;
     }
     .text-title{
+        font-family: Arial, Verdana, Helvetica, Calibri;
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     p.text-item{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 0.8em;
+      font-family: Arial, Verdana, Helvetica, Calibri;
+      font-size: 0.9em;
     }
     a.text-item{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 0.9em;
+      font-family: Arial, Verdana, Helvetica, Calibri;
+      font-size: 0.95em;
     }
     div.banner{
       max-width: 45%;
@@ -6649,19 +6653,23 @@ div.captcha{
         font-size: 1em !important;
     }
     .text-uppercase{
+        font-family: Arial, Verdana, Helvetica, Calibri;
         text-transform: uppercase !important;
         font-size: 1em;
     }
     .font-text{
+        font-family: Arial, Verdana, Helvetica, Calibri;
         text-align: center;
-        font-size:0.9em;
+        font-size:0.95em;
         margin-bottom: 2px;
     }
     .text-footer{
+        font-family: Arial, Verdana, Helvetica, Calibri;
         text-align: right;
-        font-size: 0.8em;
+        font-size: 0.85em;
     }
     .font-info{
+        font-family: Arial, Verdana, Helvetica, Calibri;
         font-size:1.1em;
         margin-bottom: 10px;
     }
