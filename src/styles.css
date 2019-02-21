@@ -6484,18 +6484,18 @@ header{
 }
 .title{
     text-decoration: underline;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 .text{
-    font-size: 1em;
+    font-size: 1.1em;
     color: #000000;
 }
 .text-required{
   color: #b31020;
 }
 .contact-required{
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin-top: 5px;
 }
 .section-content{
@@ -6514,7 +6514,7 @@ header{
 }
 .text-doc{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .text-link{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -6544,15 +6544,15 @@ ul.item-list{
 }
 p.text-item{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 a.text-item{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 a.more{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   color: #C0C0C0;
   text-decoration: underline;
 }
@@ -6570,7 +6570,7 @@ div.captcha{
 }
 @media (max-width: 320px) {
     .btn-social-icon{
-        font-size: 0.5em;
+        font-size: 0.6em;
     }
     .media-social{
         max-width: 100%;
@@ -6579,63 +6579,63 @@ div.captcha{
 }
 @media (min-width: 1440px) {
     .btn-social-icon{
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
 @media (max-width: 768px) {
     .text-uppercase{
         text-transform: uppercase !important;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
     .font-text{
         text-align: center;
-        font-size:0.7em;
+        font-size:0.8em;
         margin-bottom: 4px;
     }
     .text-footer{
         text-align: right;
-        font-size: 0.6em;
+        font-size: 0.7em;
     }
     .navbar-toggler{
-        font-size: 0.75em !important;
+        font-size: 0.8em !important;
     }
     a.nav-link{
-        font-size: 0.9em !important;
+        font-size: 1em !important;
     }
     .font-info{
-        font-size:0.7em;
+        font-size:0.8em;
         margin-bottom: 3px;
     }
     ::-webkit-input-placeholder {
-        font-size: 0.7em !important;
+        font-size: 0.8em !important;
     }
     :-moz-placeholder { /* Firefox 18- */
-        font-size: 0.7em !important;
+        font-size: 0.8em !important;
     }
     ::-moz-placeholder {  /* Firefox 19+ */
-        font-size: 0.7em !important;
+        font-size: 0.8em !important;
     }
     .title{
-        font-size: 0.9em;
+        font-size: 1em;
     }
     .text{
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
     .text-doc{
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
     .text-title{
         font-weight: bold;
-        font-size: 0.75em;
+        font-size: 0.8em;
     }
     p.text-item{
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 0.7em;
+      font-size: 0.8em;
     }
     a.text-item{
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
     div.banner{
       max-width: 45%;
@@ -6646,23 +6646,23 @@ div.captcha{
 }
 @media (min-width: 769px) {
     a.nav-link{
-        font-size: 0.9em !important;
+        font-size: 1em !important;
     }
     .text-uppercase{
         text-transform: uppercase !important;
-        font-size: 0.9em;
+        font-size: 1em;
     }
     .font-text{
         text-align: center;
-        font-size:0.8em;
+        font-size:0.9em;
         margin-bottom: 2px;
     }
     .text-footer{
         text-align: right;
-        font-size: 0.7em;
+        font-size: 0.8em;
     }
     .font-info{
-        font-size:1em;
+        font-size:1.1em;
         margin-bottom: 10px;
     }
 }

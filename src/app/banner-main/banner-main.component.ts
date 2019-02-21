@@ -5,7 +5,7 @@ import { HttpService } from '../service/http.service';
 @Component({
   selector: 'app-banner-main',
   template: `
-              <a [href]="banner.link" target="{{banner.target === 'externo' ? '_blank' : '_self'}}" *ngFor="let banner of banners">
+              <a [href]="banner.link" target="{{getTarget(banner.target)}}" *ngFor="let banner of banners">
                   <img class="img-fluid d-block img-thumbnail" [src]="banner.url" [alt]="banner.description">
               </a>
             `,
@@ -23,6 +23,10 @@ export class BannerMainComponent implements OnInit {
       });
     }
     );
+  }
+
+  getTarget(target: string): string {
+    return target === 'externo' ? '_blank' : '_self';
   }
 
   ngOnInit() {
