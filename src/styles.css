@@ -6560,12 +6560,19 @@ div.captcha{
   transform:scale(0.85);
   transform-origin:0;
 }
+.icon-whatsapp {
+  font-size: 30px !important;
+  color: #FFFFFF;
+}
 @media (max-width: 425px) {
     .btn-social-icon{
         font-size: 0.6em;
     }
     .align-self-center{
         margin-top: 10px !important;
+    }
+    .icon-whatsapp{
+        font-size: 20px !important;  
     }
 }
 @media (max-width: 320px) {
