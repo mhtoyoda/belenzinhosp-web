@@ -6598,7 +6598,7 @@ div.captcha{
         text-align: center;
         font-size:0.9em;
         margin-bottom: 4px;
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
     }
     .text-footer{
         text-align: right;
@@ -6625,27 +6625,27 @@ div.captcha{
     }
     .title{
         font-size: 1.1em;
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
     }
     .text{
         font-size: 0.9em;
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
     }
     .text-doc{
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
         font-size: 0.9em;
     }
     .text-title{
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
         font-weight: bold;
         font-size: 0.9em;
     }
     p.text-item{
-      font-family: Arial, Verdana, Helvetica, Calibri;
+      font-family: Verdana, Arial, Helvetica;
       font-size: 0.9em;
     }
     a.text-item{
-      font-family: Arial, Verdana, Helvetica, Calibri;
+      font-family: Verdana, Arial, Helvetica;
       font-size: 0.95em;
     }
     div.banner{
@@ -6660,23 +6660,23 @@ div.captcha{
         font-size: 1em !important;
     }
     .text-uppercase{
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
         text-transform: uppercase !important;
         font-size: 1em;
     }
     .font-text{
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
         text-align: center;
         font-size:0.95em;
         margin-bottom: 2px;
     }
     .text-footer{
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
         text-align: right;
         font-size: 0.85em;
     }
     .font-info{
-        font-family: Arial, Verdana, Helvetica, Calibri;
+        font-family: Verdana, Arial, Helvetica;
         font-size:1.1em;
         margin-bottom: 10px;
     }
