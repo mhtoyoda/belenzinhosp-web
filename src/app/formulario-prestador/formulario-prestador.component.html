@@ -7,6 +7,10 @@
       <app-banner></app-banner>
     </div>
     <div class="col-md-6 col-sm-9 main-text">
+      <p class="text-doc" style="font-size: 0.95em">Bem vindos prestadores de serviço do Belenzinho! liberamos em até 12horas</p>
+      <p class="text-doc" style="font-size: 0.95em">Não mora no Belém? Cadastre-se pelo <a class="font-text" style="text-decoration: underline" routerLink="/faleConosco">Fale Conosco</a></p>
+      <p class="text-doc" style="font-size: 0.95em">Não publicamos seu endereço nem fornecemos a terceiros.</p>
+      <p class="text-doc" style="font-size: 0.95em">Leia nossa Política de <a class="font-text" style="text-decoration: underline" routerLink="/privacidade">Privacidade</a></p>
       <div class="form-prestador-servicos">
         <p *ngIf="mensagem" class="alert alert-info">{{mensagem}}</p>
         <form (submit)="cadastrarPrestador($event)" method="POST" [formGroup]="formPrestadorServico">
