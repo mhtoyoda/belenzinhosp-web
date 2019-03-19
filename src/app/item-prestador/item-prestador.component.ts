@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
               <ul class="item-list">
                 <li><p class="text-item">{{nome}}</p></li>
-                <li><p class="text-item">Whatsapp.: {{celular}}</p></li>
+                <li *ngIf="celular"><p class="text-item">Whatsapp.: {{celular}}</p></li>
                 <li>
                 <a class="text-item" target="_blank" href="{{url}}" (click)="countClick()">{{url}}</a>
                 </li>

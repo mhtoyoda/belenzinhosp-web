@@ -9,6 +9,7 @@
     <div class="col-md-6 main-text">
       <div class="card text-center border-0">
         <div class="card-body">
+          <p class="text-center" *ngIf="type === 'prestadorservico'">Encontre prestadores de serviço residentes no Belenzinho!</p>
           <h5 style="font-weight: bold;">{{titulo}}</h5>       
           <div class="item-resultado" *ngFor="let item of itens | slice: pageSize | slice: 0:itemsPerPage">
             <div *ngIf="type === 'prestadorservico';else empresa">

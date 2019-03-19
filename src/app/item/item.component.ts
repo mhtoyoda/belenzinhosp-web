@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
               <ul class="item-list">
                 <li><p class="text-item">{{nomeFantasia}}</p></li>
                 <li><p class="text-item">{{endereco}}</p></li>
-                <li><p class="text-item">Tel.: {{telefone}}</p></li>
-                <li><p class="text-item">Abre: {{horarioAbertura}}  Fecha: {{horarioFechamento}}</p></li>
+                <li *ngIf="telefone"><p class="text-item">Tel.: {{telefone}}</p></li>
+                <li *ngIf="horarioAbertura"><p class="text-item">Abre: {{horarioAbertura}}  Fecha: {{horarioFechamento}}</p></li>
                 <li>
                 <a class="text-item" target="_blank" href="{{url}}" (click)="countClick()">{{url}}</a>
                 </li>
