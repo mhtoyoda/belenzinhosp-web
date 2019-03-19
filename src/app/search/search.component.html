@@ -11,7 +11,10 @@
     <div class="col-sm-4">
       <form class="form-inline">
         <div class="input-group">
-          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Tipo de negócio" [value]="termTipoNegocio" (input)="termTipoNegocio = $event.target.value" (focus)="resetFocus()">
+          <select class="browser-default custom-select" name="tipoNegocio" id="tipoNegocio" [(ngModel)]="termTipoNegocio">
+              <option value="" disabled selected>Tipo de Negócio</option>
+              <option *ngFor="let tip of negocios" value="{{tip.value}}">{{tip.value}}</option>
+          </select>
           <div class="input-group-append"><button class="btn btn-primary" type="button" (click)="consultarTipoNegocio()"><i class="fa fa-search"></i></button></div>
         </div>
       </form>
@@ -19,8 +22,11 @@
     <div class="col-sm-4">
       <form class="form-inline">
         <div class="input-group">
-          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Prestador de serviços" [value]="termPrestador" (input)="termPrestador = $event.target.value" (focus)="resetFocus()">
-          <div class="input-group-append"><button class="btn btn-primary" type="button" (click)="consultarPrestador()"><i class="fa fa-search"></i></button></div>
+            <select class="browser-default custom-select" name="atividadeProfissional" id="atividadeProfissional" [(ngModel)]="termPrestador">
+                <option value="" disabled selected>Prestador de serviços</option>
+                <option *ngFor="let ativ of atividades" value="{{ativ.value}}">{{ativ.value}}</option>
+            </select>
+           <div class="input-group-append"><button class="btn btn-primary" type="button" (click)="consultarPrestador()"><i class="fa fa-search"></i></button></div>
         </div>
       </form>
     </div>
