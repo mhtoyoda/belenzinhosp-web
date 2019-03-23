@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
                 <li><p class="text-item">{{nomeFantasia}}</p></li>
                 <li><p class="text-item">{{endereco}}</p></li>
                 <li *ngIf="telefone"><p class="text-item">Tel.: {{telefone}}</p></li>
+                <li *ngIf="telefone2"><p class="text-item">Tel2.: {{telefone2}}</p></li>
                 <li *ngIf="horarioAbertura"><p class="text-item">Abre: {{horarioAbertura}}  Fecha: {{horarioFechamento}}</p></li>
                 <li>
                 <a class="text-item" target="_blank" href="{{url}}" (click)="countClick()">{{url}}</a>
@@ -23,6 +24,7 @@ export class ItemComponent implements OnInit {
   @Input() nomeFantasia: string;
   @Input() endereco: string;
   @Input() telefone: string;
+  @Input() telefone2: string;
   @Input() horarioAbertura: string;
   @Input() horarioFechamento: string;
   @Input() url: string;

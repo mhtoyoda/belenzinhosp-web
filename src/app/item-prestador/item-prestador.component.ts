@@ -12,6 +12,9 @@ import { Component, OnInit, Input } from '@angular/core';
                 <li>
                 <a class="text-item" target="_blank" href="{{redesocial}}" (click)="countClick()">{{redesocial}}</a>
                 </li>
+                <li>
+                <a class="text-item" target="_blank" href="{{website}}" (click)="countClick()">{{website}}</a>
+                </li>
               </ul>
             `
 })
@@ -22,6 +25,7 @@ export class ItemPrestadorComponent implements OnInit {
   @Input() celular: string;
   @Input() url: string;
   @Input() redesocial: string;
+  @Input() website: string;
 
   constructor() { }
 

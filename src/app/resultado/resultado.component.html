@@ -13,11 +13,11 @@
           <h5 style="font-weight: bold;">{{titulo}}</h5>       
           <div class="item-resultado" *ngFor="let item of itens | slice: pageSize | slice: 0:itemsPerPage">
             <div *ngIf="type === 'prestadorservico';else empresa">
-                <app-item-prestador nome={{item.nome}} endereco={{item.endereco}} celular={{item.celular}} url={{item.url}} redesocial={{item.redeSocial}}></app-item-prestador>
+                <app-item-prestador nome={{item.nome}} endereco={{item.endereco}} celular={{item.celular}} url={{item.url}} redesocial={{item.redeSocial}} website={{item.website}}></app-item-prestador>
             </div>
             <ng-template #empresa>
                 <app-item nome={{item.nome}} nomeFantasia={{item.nomeFantasia}} endereco={{item.endereco}} telefone={{item.telefone}} horarioAbertura={{item.horarioAbertura}}
-              horarioFechamento={{item.horarioFechamento}} url={{item.url}} redesocial={{item.redeSocial}}></app-item>
+              horarioFechamento={{item.horarioFechamento}} url={{item.url}} redesocial={{item.redeSocial}} telefone2={{item.telefone2}}></app-item>
             </ng-template>            
           </div>
           <p *ngIf="mensagem;else pagination" class="alert alert-info">{{mensagem}}</p>          
